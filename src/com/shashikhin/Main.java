@@ -40,8 +40,6 @@ public class Main
 
         if (operators.length != 3) throw new IOException();
 
-        boolean check = IsNumberValid(operators[0]);
-
         if (!IsNumberValid(operators[0]) || !IsNumberValid(operators[2]))
         {
             throw new IOException();
