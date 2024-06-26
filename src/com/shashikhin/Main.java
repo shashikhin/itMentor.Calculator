@@ -33,8 +33,8 @@ public class Main
     public static String calc(String input) throws IOException
     {
         String result;
-        int firstNumber;
-        int secondNumber;
+        byte firstNumber;
+        byte secondNumber;
 
         String[] operators = input.split(" ");
 
@@ -45,8 +45,8 @@ public class Main
             throw new IOException();
         }
 
-        firstNumber = Integer.parseInt(operators[0]);
-        secondNumber = Integer.parseInt(operators[2]);
+        firstNumber = (byte) Integer.parseInt(operators[0]);
+        secondNumber = (byte) Integer.parseInt(operators[2]);
 
         result = switch (operators[1]) {
             case "+" -> String.valueOf(firstNumber + secondNumber);
